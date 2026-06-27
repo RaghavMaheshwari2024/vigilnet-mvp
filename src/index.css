@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vn-bg: #0A0C0F;
+  --color-vn-surface-1: #0F1217;
+  --color-vn-surface-2: #141820;
+  --color-vn-surface-3: #1A2030;
+  --color-vn-border: #1E2535;
+  --color-vn-border-strong: #2A3347;
+  --color-vn-text-primary: #E8EBF0;
+  --color-vn-text-secondary: #8C95A8;
+  --color-vn-text-muted: #4A5568;
+  --color-vn-accent: #2B6CB0;
+  --color-vn-accent-hover: #3182CE;
+  --color-vn-accent-subtle: #1A2A3F;
+  --color-vn-success: #2D6A4F;
+  --color-vn-success-text: #52B788;
+  --color-vn-success-bg: #1A2D24;
+  --color-vn-warning: #7B5E00;
+  --color-vn-warning-text: #F6A623;
+  --color-vn-warning-bg: #2A2010;
+  --color-vn-danger: #7B2230;
+  --color-vn-danger-text: #E05C6E;
+  --color-vn-danger-bg: #2A1018;
+  --color-vn-critical: #6B1A1A;
+  --color-vn-critical-text: #FF6B6B;
+  --color-vn-critical-bg: #2D0F0F;
+  --color-vn-info-text: #63B3ED;
+  --color-vn-info-bg: #0F2030;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  --radius-vn-r: 3px;
+  --radius-vn-r-md: 4px;
+  --radius-vn-r-lg: 6px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0C0F;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2535;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2A3347;
+}
+
+/* Reset base elements */
+body {
+  background-color: #0A0C0F;
+  color: #E8EBF0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Logo Grid Background and Splash Animations */
+.logo-grid-bg {
+  background-color: #050814;
+  background-image: 
+    linear-gradient(to right, rgba(16, 29, 66, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 29, 66, 0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
+  position: relative;
+}
+
+.logo-grid-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(0,229,255,0.35)); }
+  50% { filter: drop-shadow(0 0 24px rgba(0,229,255,0.7)); }
+}
+
+.glow-pulse {
+  animation: pulseGlow 3.5s infinite ease-in-out;
+}
+
+/* React Flow Controls - White button with black symbols */
+.react-flow__controls-button {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.react-flow__controls-button:hover {
+  background-color: #f3f4f6 !important;
+}
+
+.react-flow__controls-button svg {
+  fill: #000000 !important;
+  stroke: #000000 !important;
+  color: #000000 !important;
+}
